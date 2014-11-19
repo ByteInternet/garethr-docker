@@ -48,9 +48,9 @@ class docker::service (
             target => '/lib/init/upstart-job',
             force  => true,
             notify => Service['docker'],
-          }
         }
       }
+
       file { "/etc/default/${service_name}":
         ensure  => present,
         force   => true,
