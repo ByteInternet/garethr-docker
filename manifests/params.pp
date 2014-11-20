@@ -71,8 +71,7 @@ class docker::params {
   # Specifically apparmor is needed for Ubuntu:
   # https://github.com/docker/docker/issues/4734
   $prerequired_packages = $::operatingsystem ? {
-    'Debian' => ['apt-transport-https'],
-    'Ubuntu' => ['apt-transport-https', 'cgroup-lite', 'apparmor'],
+    'Ubuntu' => ['cgroup-lite', 'apparmor'],
     default  => '',
   }
 
